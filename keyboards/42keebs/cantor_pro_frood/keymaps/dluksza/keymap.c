@@ -17,6 +17,14 @@
 #define PAREN KC_LPRN
 // "{" on press, "}" wiht SFT
 #define CRBRC KC_LCBR
+// Browser back
+#define BBACK LGUI(KC_LBRC)
+// Browser forward
+#define BFORW LGUI(KC_RBRC)
+// Previous tab
+#define TPREV SGUI(KC_LBRC)
+// Next tab
+#define TNEXT SGUI(KC_RBRC)
 
 enum layer_names {
     _QW,
@@ -86,21 +94,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS
     ),
      /*                         NAVIGATION
-      * ┌───┬───┬───┬───┬───┬───┐       ┌────┬───┬────┬────┬───┬───┐
-      * │   │   │   │   │   │   │       │PgUP│HOM│    │    │   │   │
-      * ├───┼───┼───┼───┼───┼───┤       ├────┼───┼────┼────┼───┼───┤
-      * │   │   │   │   │   │   │       │ <- │DOW│ Up │ -> │   │   │
-      * ├───┼───┼───┼───┼───┼───┤       ├────┼───┼────┼────┼───┼───┤
-      * │   │   │   │   │   │   │       │PgDw│End│    │    │   │ = │
-      * └───┴───┴───┴───┴───┴───┘       └────┴───┴────┴────┴───┴───┘
+      * ┌───┬───┬───┬───┬───┬───┐       ┌────┬───┬────┬────┬────┬────┐
+      * │   │   │   │   │   │   │       │PgUP│HOM│    │    │PTab│NTab│
+      * ├───┼───┼───┼───┼───┼───┤       ├────┼───┼────┼────┼────┼────┤
+      * │   │   │   │   │   │   │       │ <- │DOW│ Up │ -> │Back│Forw│
+      * ├───┼───┼───┼───┼───┼───┤       ├────┼───┼────┼────┼────┼────┤
+      * │   │   │   │   │   │   │       │PgDw│End│    │    │    │ =  │
+      * └───┴───┴───┴───┴───┴───┘       └────┴───┴────┴────┴────┴────┘
       *               ┌───┐                   ┌───┐
       *               │   ├───┐           ┌───┤   │
       *               └───┤   ├───┐   ┌───┤   ├───┘
       *                   └───┤   │   │   ├───┘
       *                       └───┘   └───┘
       */    [_NAV] = LAYOUT_split_3x6_3(
-        KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PGUP,    KC_HOME,    KC_END,   KC_TRNS,   KC_TRNS,  KC_TRNS,
-        KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_LEFT,    KC_DOWN,    KC_UP,    KC_RIGHT,  KC_TRNS,  KC_TRNS,
+        KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PGUP,    KC_HOME,    KC_END,   KC_TRNS,   TPREV,    TNEXT,
+        KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_LEFT,    KC_DOWN,    KC_UP,    KC_RIGHT,  BBACK,    BFORW,
         KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PGDN,    KC_TRNS,    KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_PEQL,
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS
     )
