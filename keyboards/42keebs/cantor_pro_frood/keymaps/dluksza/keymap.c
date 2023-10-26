@@ -15,7 +15,7 @@
 #define SCLN_SFT LSFT_T(KC_SCLN)
 // "(" on press, ")" with SFT
 #define PAREN KC_LPRN
-// "{} on press, "}" wiht SFT
+// "{" on press, "}" wiht SFT
 #define CRBRC KC_LCBR
 
 enum layer_names {
