@@ -7,7 +7,7 @@
 #define SLSH_NUM LT(_NUM, KC_SLSH)
 // "??????" layer when hold, KC_ENT when tapped
 #define ESC_SYM LT(_SYM, KC_ESC)
-// navibation layer when hold, KC_SPC when tapped
+// navigation layer when hold, KC_SPC when tapped
 #define SPC_NAV LT(_NAV, KC_SPC)
 // shift when hold, KC_A when tapped
 #define A_SFT LSFT_T(KC_A)
