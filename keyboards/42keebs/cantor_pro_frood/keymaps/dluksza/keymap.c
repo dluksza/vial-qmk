@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
       * │   │   │   │   │   │   │       │ _ │7|#│8|*│9|(│ \ │{|}│
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
-      * │   │   │   │   │   │   │       │ = │4|$│5|%│6|^│ | │   │
+      * │   │   │   │   │   │   │       │ = │4|$│5|%│6|^│ | │ + │
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
       * │   │   │   │   │   │   │       │ - │1|!│2|@│3|#│ ⇓ │   │
       * └───┴───┴───┴───┴───┴───┘       └───┴───┴───┴───┴───┴───┘
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       */
     [_NUM] = LAYOUT_split_3x6_3( // numbers
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    LSFT(KC_MINS),  KC_7,    KC_8,  KC_9,  KC_BSLS,        CRBRC,
-           KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PEQL,        KC_4,    KC_5,  KC_6,  LSFT(KC_BSLS),  KC_TRNS,
+           KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PEQL,        KC_4,    KC_5,  KC_6,  LSFT(KC_BSLS),  KC_PPLS,
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_MINS,        KC_1,    KC_2,  KC_3,  KC_TRNS,        KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_0
     ),
