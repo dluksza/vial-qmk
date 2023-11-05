@@ -123,6 +123,15 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     NULL, // Null terminate the array of overrides!
 };
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case A_SFT:
+            return TAPPING_TERM + 45;
+        default:
+            return TAPPING_TERM;
+    }
+};
+
 
      /*
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
