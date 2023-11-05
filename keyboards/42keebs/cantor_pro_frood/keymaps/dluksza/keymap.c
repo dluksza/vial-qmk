@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            MOD_TAB,  KC_Z,   KC_X,  KC_C,  KC_V,  KC_B,                         KC_N,  KC_M,  KC_COMM,  KC_DOT,  SLSH_NUM,  KC_ENT,
                                 KC_LGUI,  KC_BSPC,  ESC_SYM,      KC_LCTL,  SPC_NAV,  KC_RALT
     ),
-     /*                          NUMBERS
+     /*                        NUMBERS (/)
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
       * │   │   │   │   │   │   │       │ _ │7|#│8|*│9|(│ \ │   │
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_MINS,        KC_1,    KC_2,  KC_3,  KC_TRNS,        KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_0
     ),
-     /*                          SYMBOLS
+     /*                        SYMBOLS (Esc)
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬────┬────┬────┬───┬───┐
       * │   │   │   │   │   │   │       │   │ F7 │ F8 │ F9 │F10│   │
       * ├───┼───┼───┼───┼───┼───┤       ├───┼────┼────┼────┼───┼───┤
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_F1,    KC_F2,  KC_F3,  KC_F12,  KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_TRNS
     ),
-     /*                         NAVIGATION
+     /*                       NAVIGATION ( )
       * ┌───┬───┬───┬───┬───┬───┐       ┌────┬───┬────┬────┬────┬────┐
       * │   │   │   │   │   │   │       │PgUP│HOM│    │    │PTab│NTab│
       * ├───┼───┼───┼───┼───┼───┤       ├────┼───┼────┼────┼────┼────┤
