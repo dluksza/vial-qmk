@@ -15,6 +15,8 @@
 #define SCLN_SFT LSFT_T(KC_SCLN)
 // "(" on press, ")" with SFT
 #define PAREN KC_LPRN
+// "[" on press, "]" with SFT
+#define BRCKE KC_LBRC
 // "{" on press, "}" wiht SFT
 #define CRBRC KC_LCBR
 // Browser back
@@ -38,7 +40,7 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /*                            QWERTY
       * ┌───────┬───┬───┬───┬───┬───┐           ┌───┬───┬───┬───┬─────┬───┐
-      * │  (|)  │ Q │ W │ E │ R │ T │           │ Y │ U │ I │ O │  P  │{|}│
+      * │  (|)  │ Q │ W │ E │ R │ T │           │ Y │ U │ I │ O │  P  │[|]│
       * ├───────┼───┼───┼───┼───┼───┤           ├───┼───┼───┼───┼─────┼───┤
       * │   `   │ A │ S │ D │ F │ G │           │ H │ J │ K │ L │  ;  │ ' │
       * ├───────┼───┼───┼───┼───┼───┤           ├───┼───┼───┼───┼─────┼───┤
@@ -51,14 +53,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       *                       └───────┘   └───┘
       */
     [_QW] = LAYOUT_split_3x6_3(
-           PAREN,    KC_Q,   KC_W,  KC_E,  KC_R,  KC_T,                         KC_Y,  KC_U,  KC_I,     KC_O,    KC_P,      CRBRC,
+           PAREN,    KC_Q,   KC_W,  KC_E,  KC_R,  KC_T,                         KC_Y,  KC_U,  KC_I,     KC_O,    KC_P,      BRCKE,
            KC_GRV,   A_SFT,  KC_S,  KC_D,  KC_F,  KC_G,                         KC_H,  KC_J,  KC_K,     KC_L,    SCLN_SFT,  KC_QUOT,
            MOD_TAB,  KC_Z,   KC_X,  KC_C,  KC_V,  KC_B,                         KC_N,  KC_M,  KC_COMM,  KC_DOT,  SLSH_NUM,  KC_ENT,
                                 KC_LGUI,  KC_BSPC,  ESC_SYM,      KC_LCTL,  SPC_NAV,  KC_RALT
     ),
      /*                        NUMBERS (/)
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
-      * │   │   │   │   │   │   │       │ _ │7|#│8|*│9|(│ \ │   │
+      * │   │   │   │   │   │   │       │ _ │7|#│8|*│9|(│ \ │{|}│
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
       * │   │   │   │   │   │   │       │ = │4|$│5|%│6|^│ | │   │
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
@@ -71,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       *                       └───┘   └───┘
       */
     [_NUM] = LAYOUT_split_3x6_3( // numbers
-           KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    LSFT(KC_MINS),  KC_7,    KC_8,  KC_9,  KC_BSLS,        KC_TRNS,
+           KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    LSFT(KC_MINS),  KC_7,    KC_8,  KC_9,  KC_BSLS,        CRBRC,
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_PEQL,        KC_4,    KC_5,  KC_6,  LSFT(KC_BSLS),  KC_TRNS,
            KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_MINS,        KC_1,    KC_2,  KC_3,  KC_TRNS,        KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS, KC_0
@@ -117,10 +119,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const key_override_t right_parentacy = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN);
+const key_override_t right_bracket = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC);
 const key_override_t right_curly_brace = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &right_parentacy,
+    &right_bracket,
     &right_curly_brace,
     NULL, // Null terminate the array of overrides!
 };
