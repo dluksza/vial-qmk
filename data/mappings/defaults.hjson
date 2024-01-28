@@ -1,46 +1,6 @@
 {
     "development_board": {
-        "promicro": {
-            "processor": "atmega32u4",
-            "bootloader": "caterina",
-            "pin_compatible": "promicro"
-        },
-        "elite_c": {
-            "processor": "atmega32u4",
-            "bootloader": "atmel-dfu",
-            "pin_compatible": "promicro"
-        },
-        "elite_pi": {
-            "processor": "RP2040",
-            "bootloader": "rp2040",
-            "board": "QMK_PM2040"
-        },
-        "proton_c": {
-            "processor": "STM32F303",
-            "bootloader": "stm32-dfu",
-            "board": "QMK_PROTON_C"
-        },
-        "kb2040": {
-            "processor": "RP2040",
-            "bootloader": "rp2040",
-            "board": "QMK_PM2040"
-        },
-        "promicro_rp2040": {
-            "processor": "RP2040",
-            "bootloader": "rp2040",
-            "board": "QMK_PM2040"
-        },
         "frood": {
-            "processor": "RP2040",
-            "bootloader": "rp2040",
-            "board": "QMK_PM2040"
-        },
-        "blok": {
-            "processor": "RP2040",
-            "bootloader": "rp2040",
-            "board": "QMK_BLOK"
-        },
-        "michi": {
             "processor": "RP2040",
             "bootloader": "rp2040",
             "board": "QMK_PM2040"
