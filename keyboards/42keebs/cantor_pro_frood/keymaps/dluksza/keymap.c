@@ -3,6 +3,8 @@
 
 #include QMK_KEYBOARD_H
 
+#include "features/achordion.h"
+
 // "??????" layer when hold, KC_ESC when tapped
 #define SLSH_NUM LT(_NUM, KC_SLSH)
 // "??????" layer when hold, KC_ENT when tapped
@@ -140,6 +142,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 };
 
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_achordion(keycode, record)) { return false; }
+  // Your macros ...
+
+  return true;
+}
+
+void matrix_scan_user(void) {
+  achordion_task();
+}
 
      /*
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
