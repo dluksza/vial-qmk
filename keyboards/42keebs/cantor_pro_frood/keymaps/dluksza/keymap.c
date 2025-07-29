@@ -126,11 +126,10 @@ const key_override_t right_parentacy = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC
 const key_override_t right_bracket = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC);
 const key_override_t right_curly_brace = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR);
 
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
     &right_parentacy,
     &right_bracket,
     &right_curly_brace,
-    NULL, // Null terminate the array of overrides!
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -147,11 +146,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   // Your macros ...
 
   return true;
-}
+};
 
 void matrix_scan_user(void) {
   achordion_task();
-}
+};
 
      /*
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
